@@ -1,0 +1,210 @@
+[
+    {
+        "Nombre": "Messi",
+        "Foto": "http://static.classora.com/files/uploads/images/topics/21/2257/main.jpg",
+        "Goles": 13,
+        "Partidos": 14,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Barcelona"
+    },
+    {
+        "Nombre": "Luis Suárez",
+        "Foto": "http://www.uefa.org/imgml/TP/players/1/2015/324x324/106375.jpg",
+        "Goles": 12,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Barcelona"
+    },
+    {
+        "Nombre": "Cristiano Ronaldo",
+        "Foto": "http://static.classora-technologies.com/files/uploads/images/entries/513691/main.jpg",
+        "Goles": 11,
+        "Partidos": 7,
+        "TipoJugador": "Campo",
+        "Equipo": "Real Madrid"
+    },
+    {
+        "Nombre": "I. Aspas",
+        "Foto": "http://cdn.c.photoshelter.com/img-get2/I0000Z2R1C8J24SM/fit=/fill=200x200/g=G0000CnRp0wXBo1E/I0000Z2R1C8J24SM.jpg",
+        "Goles": 11,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Celta de Vigo"
+    },
+    {
+        "Nombre": "Willian José",
+        "Foto": "http://cache.images.globalsportsmedia.com/soccer/players/150x150/86467.png",
+        "Goles": 9,
+        "Partidos": 15,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Real Sociedad"
+    },
+    {
+        "Nombre": "W. Ben Yedder",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-11233.jpg",
+        "Goles": 8,
+        "Partidos": 13,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Sevilla"
+    },
+    {
+        "Nombre": "R. Castro",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-820.jpg",
+        "Goles": 8,
+        "Partidos": 17,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Betis"
+    },
+    {
+        "Nombre": "S. Ramirez",
+        "Foto": "http://st.comuniazo.com/img/players/1972.png",
+        "Goles": 7,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "Málaga"
+    },
+    {
+        "Nombre": "A. Griezmann",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-3643.jpg",
+        "Goles": 7,
+        "Partidos": 7,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Campo",
+        "Equipo": "At. Madrid"
+    },
+
+    {
+        "Nombre": "S. Asenjo",
+        "Foto": "https://trytopic.com/attachments/avatars/08/73/45/35/63/B5Ikk4.jpg",
+        "Goles": 12,
+        "Partidos": 17,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Villareal"
+    },
+    {
+        "Nombre": "Rulli",
+        "Foto": "http://st.comuniazo.com/img/players/1915.png",
+        "Goles": 25,
+        "Partidos": 17,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Real Sociedad"
+    },
+    {
+        "Nombre": "Adán",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-5062.jpg",
+        "Goles": 29,
+        "Partidos": 17,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Betis"
+    },
+    {
+        "Nombre": "Ochoa",
+        "Foto": "http://st.comuniazo.com/img/players/1934.png",
+        "Goles": 38,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Granada"
+    },
+    {
+        "Nombre": "F. Pacheco",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-6945.jpg",
+        "Goles": 18,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Alavés"
+    },
+    {
+        "Nombre": "Cuéllar",
+        "Foto": "http://st.comuniazo.com/img/players/196.png",
+        "Goles": 32,
+        "Partidos": 16,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Sporting"
+    },
+    {
+        "Nombre": "Oblak",
+        "Foto": "http://cdn.c.photoshelter.com/img-get2/I0000crew7bEDAf0/fit=/fill=200x200/g=G0000iogV1q_wQmo/I0000crew7bEDAf0.jpg",
+        "Goles": 13,
+        "Partidos": 14,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "At. Madrid"
+    },
+    {
+        "Nombre": "Ter Stegen",
+        "Foto": "http://thewallmachine.com/files/1411343746.jpg",
+        "Goles": 13,
+        "Partidos": 15,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Barcelona"
+    },
+    {
+        "Nombre": "S. Rico",
+        "Foto": "http://cdn.c.photoshelter.com/img-get2/I0000l9HiqRTnKx8/fit=/fill=200x200/g=G0000iogV1q_wQmo/I0000l9HiqRTnKx8.jpg",
+        "Goles": 17,
+        "Partidos": 15,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Sevilla"
+    },
+    {
+        "Nombre": "Kameni",
+        "Foto": "http://www.aupaathletic.com/comun/jugadores_fotos/foto_jugador-859.jpg",
+        "Goles": 22,
+        "Partidos": 14,
+        "Minutos": 1200,
+        "Amarillas": 5,
+        "Rojas": 1,
+        "TipoJugador": "Portero",
+        "Equipo": "Málaga"
+    }
+
+]

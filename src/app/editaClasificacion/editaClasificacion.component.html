@@ -1,0 +1,44 @@
+<div class="container" style="margin-top:50px; padding-top:10px;">
+<div class="row" style="padding-left:30%"><h1>PANEL DE ADMINISTRACION</h1></div>
+   <div class="row" style="margin-bottom: 30px">
+		<div class="col-md-12">
+			<div class="btn-group boton">
+				<a routerLink="/editaResultados" class="btn btn-primary boton">Resultados</a>
+				<a routerLink="/editaClasificacion" class="btn btn-primary boton">Clasificación</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row forms" *ngFor="let equipo of equipos;let i = index; ">
+		<form #form="ngForm" (ngSubmit)="editEquipo(equipo)">
+			<label for="Nombre">Nombre</label><input type="text" name="Nombre" [(ngModel)]="equipo.Nombre">
+			<label for="Puntos">Puntos</label><input type="number" name="Puntos" [(ngModel)]="equipo.Puntos">
+			<label for="Jugados">PJ</label><input type="number" name="Jugados" [(ngModel)]="equipo.Jugados">
+			<label for="Victorias">V</label><input type="number" name="Victorias" [(ngModel)]="equipo.Victorias">
+			<label for="Empates">E</label><input type="number" name="Empates" [(ngModel)]="equipo.Empates">
+			<label for="Derrotas">D</label><input type="number" name="Derrotas" [(ngModel)]="equipo.Derrotas">
+			<label for="GolesAfavor">GF</label><input type="number" name="GolesAfavor" [(ngModel)]="equipo.GolesAfavor">
+			<label for="GolesEncontra">GC</label><input type="number" name="GolesEnContra" [(ngModel)]="equipo.GolesEnContra">
+			<button type="submit">Actualizar</button>
+			<button (click)="eliminarEquipo(equipo)">Eliminar</button>
+		</form>
+	<br>
+   </div> 
+     <div class="row" style="margin-left:10%">
+       	<form [formGroup]="addEquipoForm" (ngSubmit)="addEquipo()">
+			<fieldset>
+      			<legend>Añadir equipo</legend>
+       			<label>Nombre</label><input type="text" name="Nombre">
+				<label>Puntos</label><input type="number" name="Puntos" formControlName="Puntos">
+				<label>PJ</label><input type="number" name="Jugados" >
+				<label>V</label><input type="number" name="Victorias" >
+				<label>E</label><input type="number" name="Empates">
+				<label>D</label><input type="number" name="Derrotas">
+				<label>GF</label><input type="number" name="GolesAfavor">
+				<label>GC</label><input type="number" name="GolesEnContra">
+				<button type="submit">Guardar</button>
+			</fieldset>
+       	</form>
+       </div>
+</div>

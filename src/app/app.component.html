@@ -1,0 +1,40 @@
+<div class="container fondo">
+
+    <!--nav class="navbar navbar-dark bg-primary">
+        <div class="nav navbar-nav">
+            <a routerLink="/" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <i class="fa fa-home"></i> Home
+            </a>
+            <a routerLink="/about" class="nav-item nav-link" routerLinkActive="active">
+                <i class="fa fa-info-circle"></i> About
+            </a>
+        </div>
+    <-/nav-->
+    <div class="col-md-12">
+        <img [src]="logoLFP" class="contenedor">
+    </div>
+    <br>
+    <br>
+    <div layout-align="center" style="margin-top:8px">
+        <h2>Temporada 2016/17</h2>
+        <hr>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1">
+            <img *ngFor="let equipo of equipos" class="iconoEquipo" [src]="equipo.Escudo">
+        </div>
+        <div class="col-md-11">
+            <div class="btn-group boton">
+                <a routerLink="/resultados" class="btn btn-primary boton">Resultados</a>
+                <a routerLink="/clasificacion" class="btn btn-primary boton">Clasificación</a>
+                <a routerLink="/estadisticas" class="btn btn-primary boton">Estadísticas</a>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+	<div class="row">
+		<button style="width:150px;height:50px;"><a routerLink="/administracion"><strong>ADMINISTRACION</strong></a></button>
+	</div>
+</div>

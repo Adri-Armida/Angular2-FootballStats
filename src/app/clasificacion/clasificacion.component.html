@@ -1,0 +1,37 @@
+<div>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-default">
+            <tr>
+                <th class="celda">#</th>
+                <th>Equipo</th>
+                <th class="celda">P</th>
+                <th class="celda">PJ</th>
+                <th class="celda">PG</th>
+                <th class="celda">PE</th>
+                <th class="celda">PP</th>
+                <th class="celda">GF</th>
+                <th class="celda">GC</th>
+                <!--th>Actions</th-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let equipo of equipos;let i = index; ">
+
+                <td *ngIf="i <4" class="champions celda">
+                    {{ i+1}}
+                </td>
+                <td *ngIf="i === 4 || i === 5" class="uefa celda">{{i+1}}</td>
+                <td *ngIf="i > 5 && i < 17">{{i+1}}</td>
+                <td *ngIf="i >= 17 && i < 20" class="descenso celda">{{i+1}}</td>
+                <td class="equipo">{{equipo.Nombre}}</td>
+                <td class="celda"><b>{{equipo.Puntos}}</b></td>
+                <td class="celda">{{equipo.Jugados}}</td>
+                <td class="celda">{{equipo.Victorias}}</td>
+                <td class="celda">{{equipo.Empates}}</td>
+                <td class="celda">{{equipo.Derrotas}}</td>
+                <td class="celda">{{equipo.GolesAfavor}}</td>
+                <td class="celda">{{equipo.GolesEnContra}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

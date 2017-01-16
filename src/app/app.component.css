@@ -1,0 +1,24 @@
+.contenedor {
+    max-width: 100%;
+}
+
+.iconoEquipo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 13.9px;
+}
+
+.fondo {
+    background-image: url("../../dist/assets/campo-de-futbol-alineacion5.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.boton {
+    width: 100%;
+}

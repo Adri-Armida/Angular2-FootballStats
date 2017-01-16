@@ -1,0 +1,87 @@
+<br>
+<br>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-log-3 divGoleadores">
+            <div class="titulo">
+                <h3>Pichichi</h3>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Jugador</th>
+                        <th>Goles</th>
+                        <th>Partidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let goleador of goleadores;let i = index;">
+                        <td><img [src]="goleador.Foto" class="foto"></td>
+                        <td>
+                            <div class="jugadorNombre">
+                                {{goleador.Nombre}}
+                            </div>
+                            <div class="divEquipo">
+                                {{goleador.Equipo}}
+                            </div>
+                        </td>
+                        <td *ngIf="i === 0" class="elMejor">
+                            {{goleador.Goles}}
+                        </td>
+                        <td *ngIf="i != 0" class="restoGoleadores">
+                            {{goleador.Goles}}
+                        </td>
+                        <td class="restoCeldas">
+                            {{goleador.Partidos}}
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col col-log-3 divPorteros">
+            <div class="titulo">
+                <h3>Zamora</h3>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Portero</th>
+                        <th>Promedio</th>
+                        <th>Goles</th>
+                        <th>Partidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let portero of porteros;let i = index;">
+                        <td><img [src]="portero.Foto" class="foto"></td>
+                        <td>
+                            <div class="jugadorNombre">
+                                {{portero.Nombre}}
+                            </div>
+                            <div>
+                                {{portero.Equipo}}
+                            </div>
+                        </td>
+                        <td *ngIf="i === 0" class="elMejor">
+                            {{ redondear2Decimales(portero.Goles / portero.Partidos)}}
+                        </td>
+                        <td *ngIf="i != 0" class="restoGoleadores">
+                            {{ redondear2Decimales(portero.Goles / portero.Partidos)}}
+                        </td>
+                        <td class="restoCeldas">
+                            {{portero.Goles}}
+                        </td>
+                        <td class="restoCeldas">
+                            {{portero.Partidos}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

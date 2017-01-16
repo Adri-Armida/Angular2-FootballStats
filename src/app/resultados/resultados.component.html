@@ -1,0 +1,398 @@
+<!--ul class="heroes">
+  <li *ngFor="let resultado of resultados" (click)="onSelect(hero)"
+      [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span>
+    <span>{{hero.name}}</span>
+    <button class="delete"
+      (click)="delete(hero); $event.stopPropagation()">x</button>
+  </li>
+</ul-->
+<br>
+<br>
+<div class="container">
+
+    <app-toast [message]="toast.message"></app-toast>
+
+    <nav aria-label="Page navigation example" class="row justify-content-md-center">
+        <ul class="pagination <pagination-lg></pagination-lg>">
+            <li class="page-item">
+                <a class="page-link" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link">16</a></li>
+            <li class="page-item"><a class="page-link">17</a></li>
+            <li class="page-item"><a class="page-link">18</a></li>
+            <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="divForPartido">
+        <br>
+        <br>
+        <div *ngFor="let partido of resultados;let i=index;">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-3 local">
+                    <div class="divLocal">{{partido.Local.Equipo}}</div>
+                    <div *ngFor="let equipo of equipos" class="divEscudo">
+                        <img [src]="equipo.Escudo" class="escudo" *ngIf="equipo.Nombre == partido.Local.Equipo">
+                    </div>
+
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles > partido.Visitante.Goles" (change)="onChange($event)">
+                    <b>{{partido.Local.Goles}}</b>-{{partido.Visitante.Goles}}
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles < partido.Visitante.Goles">
+                    {{partido.Local.Goles}}-<b>{{partido.Visitante.Goles}}</b>
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Estado == 'Aplazado'">
+                    &nbsp;-&nbsp;
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles == partido.Visitante.Goles && partido.Estado != 'Aplazado'">
+                    {{partido.Local.Goles}}-{{partido.Visitante.Goles}}
+                </div>
+
+                <div class="col col-lg-3 visitante">
+
+                    <div class="divVisitante">{{partido.Visitante.Equipo}}</div>
+                    <div *ngFor="let equipo of equipos" class="divEscudoVisitante">
+                        <img [src]="equipo.Escudo" class="escudo" *ngIf="equipo.Nombre == partido.Visitante.Equipo">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div *ngIf="partido.Estado == 'Terminado' " class="divFecha">
+                    <button (click)="mostrarDatosPartido(i)">FINALIZADO</button>
+                </div>
+                <div *ngIf="partido.Estado == 'EnJuego' " class="divFecha parpadea">
+                    <button (click)="mostrarDatosPartido(i)">EN JUEGO</button>
+                </div>
+                <div *ngIf="partido.Estado == 'Aplazado' " class="divFecha">
+                    APLAZADO
+                </div>
+                <div *ngIf="partido.Estado == 'PorDisputar' " class="divFecha">
+                    POR DISPUTAR
+                </div>
+                <div *ngElse class="divFecha">{{partido.Fecha}}</div>
+
+            </div>
+            <div class="row justify-content-md-center" *ngIf="mostrarDatosPartidoVector[i]===true">
+                <div class="col col-lg-3 ">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Titular</th>
+                                <th>Suplente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador1}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador1}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador2}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador2}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador3}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador3}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador4}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador4}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador5}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador5}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador6}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador6}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador7}}
+                                </td>
+                                <td>
+                                    {{partido.Local.Banquillo.Jugador7}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador8}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador9}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador10}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Local.Titulares.Jugador11}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col col-lg-3 ">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Posesion}}
+                                </td>
+                                <td>
+                                    <b>Posesion</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Posesion}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Remates}}
+                                </td>
+                                <td>
+                                    <b>Remates</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Remates}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.RematesPuerta}}
+                                </td>
+                                <td>
+                                    <b>A puerta</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.RematesPuerta}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Corners}}
+                                </td>
+                                <td>
+                                    <b>Corners</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Corners}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Paradas}}
+                                </td>
+                                <td>
+                                    <b>Paradas</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Paradas}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Perdidas}}
+                                </td>
+                                <td>
+                                    <b>Perd.</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Perdidas}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Recuperaciones}}
+                                </td>
+                                <td>
+                                    <b>Recup.</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Recuperaciones}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.Faltas}}
+                                </td>
+                                <td>
+                                    <b>Faltas</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Faltas}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.FuerasDeJuego}}
+                                </td>
+                                <td>
+                                    <b>F.Juego</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.FuerasDeJuego}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.TarjetasAmarillas}}
+                                </td>
+                                <td>
+                                    <b>T.Amarillas</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.TarjetasAmarillas}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{partido.Local.TarjetasRojas}}
+                                </td>
+                                <td>
+                                    <b>T.Rojas</b>
+                                </td>
+                                <td>
+                                    {{partido.Visitante.TarjetasRojas}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col col-lg-3 ">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Titular</th>
+                                <th>Suplente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador1}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador1}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador2}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador2}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador3}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador3}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador4}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador4}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador5}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador5}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador6}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador6}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador7}}
+                                </td>
+                                <td>
+                                    {{partido.Visitante.Banquillo.Jugador7}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador8}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador9}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador10}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="titular">
+                                    {{partido.Visitante.Titulares.Jugador11}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,24 @@
+table .champions {
+    background-color: #A9F5A9;
+}
+
+table .uefa {
+    background-color: #CED8F6;
+}
+
+table .descenso {
+    background-color: #F78181;
+}
+
+.celda {
+    height: auto;
+    width: 1%;
+}
+
+.puntos {
+    background-color: #F5D0A9;
+}
+
+.equipo {
+    width: 5%;
+}

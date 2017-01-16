@@ -1,0 +1,51 @@
+table .champions {
+    background-color: #A9F5A9;
+}
+
+table .uefa {
+    background-color: #CED8F6;
+}
+
+table .descenso {
+    background-color: #F78181;
+}
+
+.celda {
+    height: auto;
+    width: 1%;
+}
+
+.puntos {
+    background-color: #F5D0A9;
+}
+
+.equipo {
+    width: 5%;
+}
+
+input[type="number"] {
+	width: 50px;
+}
+
+input[type="text"]{
+	width: 120px;
+}
+
+.forms{
+	font-size: 14px;
+	margin: 10px;
+	margin-left: 30px;
+	border: 1px solid;
+	padding: 5px;
+}
+
+.forms input{
+	margin-right: 8px;
+}
+
+label{
+	margin-right: 3px;
+}
+.boton {
+    width: 100%;
+}

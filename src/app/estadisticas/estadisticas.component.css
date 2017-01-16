@@ -1,0 +1,43 @@
+.foto {
+    width: 70px;
+    height: 70px;
+}
+
+.elMejor {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.restoGoleadores {
+    background-color: lightgrey;
+}
+
+.elMejor,
+.restoGoleadores,
+.restoCeldas {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+}
+
+.jugadorNombre {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tablaScroll {
+    height: 100px;
+    overflow: auto;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.divGoleadores {
+    background-color: azure;
+}
+
+.divPorteros {
+    background-color: beige;
+}

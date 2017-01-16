@@ -1,0 +1,88 @@
+<div class="container" style="margin-top:50px; padding-top:10px;">
+   <div class="row" style="padding-left:30%"><h1>PANEL DE ADMINISTRACION</h1></div>
+   <div class="row" style="margin-bottom: 30px">
+		<div class="col-md-12">
+			<div class="btn-group boton">
+				<a routerLink="/editaResultados" class="btn btn-primary boton">Resultados</a>
+				<a routerLink="/editaClasificacion" class="btn btn-primary boton">Clasificación</a>
+			</div>
+		</div>
+	</div>
+    <nav aria-label="Page navigation example" class="row justify-content-md-center">
+        <ul class="pagination <pagination-lg></pagination-lg>">
+            <li class="page-item">
+                <a class="page-link" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link">16</a></li>
+            <li class="page-item"><a class="page-link">17</a></li>
+            <li class="page-item"><a class="page-link">18</a></li>
+            <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="divForPartido">
+        <br>
+        <br>
+        <div *ngFor="let partido of resultados; let i = index;">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-3 local">
+                    <div class="divLocal">{{partido.Local.Equipo}}</div>
+                    <div *ngFor="let equipo of equipos" class="divEscudo">
+                        
+                    </div>
+
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles > partido.Visitante.Goles">
+                    <b>{{partido.Local.Goles}}</b>-{{partido.Visitante.Goles}}
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles < partido.Visitante.Goles">
+                    {{partido.Local.Goles}}-<b>{{partido.Visitante.Goles}}</b>
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Estado == 'Aplazado'">
+                    &nbsp;-&nbsp;
+                </div>
+                <div class="col col-lg-2 goles" *ngIf="partido.Local.Goles == partido.Visitante.Goles && partido.Estado != 'Aplazado'">
+                    {{partido.Local.Goles}}-{{partido.Visitante.Goles}}
+                </div>
+
+                <div class="col col-lg-3 visitante">
+
+                    <div class="divVisitante">{{partido.Visitante.Equipo}}</div>
+                    <div *ngFor="let equipo of equipos" class="divEscudoVisitante">
+                    </div>
+                </div>
+                <button style="margin-left:40px;margin-bottom:30px;width:100px;height:50px" (click)="editarPartido(i)">Modificar</button>
+            </div>
+            <br>
+            <div *ngIf="mostrarDatosPartidoVector[i]===true" style="border:1px solid;padding-top:3%;padding-bottom:3%">
+            	<div class="row" style="margin-left:20%"><strong>Marcador</strong></div>
+            	<div class="row">
+            		<div style="margin-left:20%">
+						<form #form="ngForm" (ngSubmit)="editResultado(partido)">
+							<input type="text" value="{{ partido.Local.Equipo }}">
+							<input type="number" name="goles" [(ngModel)]="partido.Local.Goles" placeholder="{{ partido.Local.Goles }}">
+							<input type="number" name="goles2" [(ngModel)]="partido.Visitante.Goles" placeholder="{{ partido.Visitante.Goles }}">
+							<input type="text" value="{{ partido.Visitante.Equipo }}">
+							<select name="partido.Estado" [(ngModel)]="partido.Estado">
+								<option value="Terminado" [selected] = "partido.Estado === Terminado">Terminado</option>
+								<option value="EnJuego" [selected] = "partido.Estado === EnJuego">En juego</option>
+								<option value="Aplazado" [selected] = "partido.Estado === Aplazado">Aplazado</option>
+								<option value="porDisputar" [selected] = "partido.Estado === porDisputar">Por disputar</option>
+							</select>
+							<button type="submit">Guardar</button>
+						</form>
+					</div>
+            	</div>
+			</div>
+            <br>
+        </div>
+    </div>
+</div>
+<app-toast [message]="toast.message"></app-toast>
