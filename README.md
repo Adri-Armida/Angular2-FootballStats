@@ -12,9 +12,7 @@ This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_
 * [Font Awesome](http://fontawesome.io): icons
 
 ## Prerequisites
-1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
-2. Install Angular CLI: `npm i angular-cli -g`
-3. From project root folder install all the dependencies: `npm i`
+1. From project root folder install all the dependencies: `npm install`
 
 ## Run
 1. Command window 1: `mongod`: run MongoDB
