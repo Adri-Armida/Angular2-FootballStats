@@ -22,5 +22,5 @@ This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_
 3. Command window 3: `ng build -w`: build the project and keep watching the files for changes
 4. Command window 4: `npm start`: run Express server
 5. Go to [localhost:3000](http://localhost:3000)
-5. Split in two windows: Administracion and default view (user view). Make updates on "Resultados" or "Clasificacion" for view changes on user view  in real time. (Waiting for 5 s. to watch the changes)
+5. Split in two windows: Administracion and default view (user view). Make updates on "Resultados" or "Clasificacion" for watching changes on user view  in real time. (Waiting for 5 s. to watch the changes)
 
