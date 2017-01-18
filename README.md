@@ -1,6 +1,7 @@
-
-
-
+## Information
+Versión: Alpha
+Description: MEAN project for "Implementación e Implantación de Sistemas Software". Universidad de Cádiz (UCA)
+Project members: José Álvaro Gutiérrez Romero & Adrián Armida Mena
 
 This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_bundle)):
 * [**M**ongoose.js](http://www.mongoosejs.com) ([MongoDB](https://www.mongodb.com)): database
@@ -16,8 +17,9 @@ This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_
 
 ## Run
 1. Command window 1: `mongod`: run MongoDB
-2. Import JSON collections (jsonCollections folder) on MongoDB
-3. Command window 2: `ng build -w`: build the project and keep watching the files for changes
-4. Command window 3: `npm start`: run Express server
+2. Command window 2: `mongoimport --db proyecto --collection jugadores --drop --file ~/jsonCollections/jugadores.json`. Do it with equipos and partidos collections.
+3. Command window 3: `ng build -w`: build the project and keep watching the files for changes
+4. Command window 4: `npm start`: run Express server
 5. Go to [localhost:3000](http://localhost:3000)
+5. Split in two windows: Administracion and default view (user view). Make updates on "Resultados" or "Clasificacion" for view changes on user view  in real time. (Waiting for 5 s. to watch the changes)
 
