@@ -1,7 +1,7 @@
 ## Information
-Versión: Alpha
-Description: MEAN project for "Implementación e Implantación de Sistemas Software". Universidad de Cádiz (UCA)
-Project members: José Álvaro Gutiérrez Romero & Adrián Armida Mena
+* Versión: Alpha
+* Description: MEAN project for "Implementación e Implantación de Sistemas Software". Universidad de Cádiz (UCA)
+* Project members: José Álvaro Gutiérrez Romero & Adrián Armida Mena
 
 This project uses the [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(software_bundle)):
 * [**M**ongoose.js](http://www.mongoosejs.com) ([MongoDB](https://www.mongodb.com)): database
